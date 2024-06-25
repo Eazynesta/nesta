@@ -123,6 +123,192 @@ body
     color: aqua;
 }
 
+.projects {
+    padding: 50px 10%;
+    background: #120F31; /* Darker shade of your theme color */
+    text-align: center;
+}
+
+.project-nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    color: aqua;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-box {
+    background: #221E3F; /* Lighter shade of the background */
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 0 20px aqua;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+.project-box i {
+    font-size: 40px;
+    color: aqua;
+    margin-bottom: 10px;
+}
+
+.project-box h3 {
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+
+.project-box p {
+    color: aliceblue;
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background: aqua;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.learn-more:hover {
+    background: #0ff;
+}
+.projects {
+    padding: 50px 10%;
+    background: #120F31; /* Darker shade of your theme color */
+    text-align: center;
+    position: relative;
+}
+
+.project-nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    color: aqua;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.project-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-box {
+    background: #221E3F; /* Lighter shade of the background */
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    height: 300px;
+    text-align: left;
+    box-shadow: 0 0 20px aqua;
+    margin: 20px 10px;
+    transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
+}
+
+.project-box.active {
+    width: 250px;
+    height: 350px;
+}
+
+.project-box i {
+    font-size: 40px;
+    color: aqua;
+    margin-bottom: 10px;
+}
+
+.project-box h3 {
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+
+.project-box p {
+    color: aliceblue;
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background: aqua;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.learn-more:hover {
+    background: #0ff;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: aqua;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
 @keyframes slideRight {
     0% {
         transform: translateX(-100px);
@@ -144,3 +330,153 @@ body
         opacity: 1;
     }
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  --primary: #ec994b;
+  --white: #ffffff;
+  --bg: #120F31;
+  --accent: aqua;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--bg);
+  color: var(--white);
+}
+
+.container {
+  max-width: 124rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 3rem;
+  color: var(--primary);
+  padding: 2rem 0;
+}
+
+#projects {
+  padding: 4rem 0;
+  background-color: rgb(8,27,41);
+}
+
+#projects .projects-slider {
+  height: 52rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.project-slide {
+  width: 37rem;
+  height: 42rem;
+  background: #221E3F; /* Lighter shade of the background */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 0 20px var(--accent);
+  margin: 0 10px;
+  transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
+}
+
+.project-slide.active {
+  width: 250px;
+  height: 350px;
+}
+
+.project-slide .project-slide-img {
+  font-size: 40px;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.project-slide h2.project-title {
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.project-slide p.project-description {
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.projects-slider-control {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-slider-control .swiper-button-next {
+  left: 58% !important;
+  transform: translateX(-58%) !important;
+}
+
+.projects-slider-control .swiper-button-prev {
+  left: 42% !important;
+  transform: translateX(-42%) !important;
+}
+
+.projects-slider-control .slider-arrow {
+  background: var(--white);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.projects-slider-control .slider-arrow ion-icon {
+  font-size: 2rem;
+  color: #222224;
+}
+
+.projects-slider-control .swiper-pagination {
+  position: relative;
+  width: 15rem;
+  bottom: 1rem;
+}
+
+.projects-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--primary);
+}
+
+.project-nav {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .project-link {
+    color: aqua;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .project-link:hover {
+    color: #0ff;
+  }
+  
